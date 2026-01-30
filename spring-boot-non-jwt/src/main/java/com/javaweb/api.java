@@ -20,8 +20,8 @@ public class api {
 	@RequestMapping(value = "/api/building/", method = RequestMethod.GET)
 	public List<BuildingDTO> getBuilding(@RequestParam (name = "name", required = false) String name,
 										@RequestParam (name = "districtId", required = false) Long district,
-										@RequestParam (name = "typeCode", required = false) List<String> typeCode) {
-		List<BuildingDTO> result = buildingService.buildingEntities(name, district, typeCode);
+										@RequestParam (name = "typeCode", required = false) List<String> typecode) {
+		List<BuildingDTO> result = buildingService.buildingEntities(name, district, typecode);
 		return result;
 
 	}
