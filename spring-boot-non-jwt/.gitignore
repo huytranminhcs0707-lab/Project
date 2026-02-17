@@ -1,5 +1,14 @@
-.classpath
-.project
-.settings/
+# Maven
 target/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
