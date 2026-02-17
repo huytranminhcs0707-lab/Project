@@ -13,44 +13,56 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "renttype")
-public class RentTypeEntity {
+@Table(name = "role")
+public class RoleEntity {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	 private Integer id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
+	private Integer id;
 	
-	@Column(name = "code")
-	private String code;
-	
-	@Column(name = "name")
+	@Column(name = "name", nullable = false)
 	private String name;
 	
-	@ManyToMany(mappedBy = "renttypes", fetch = FetchType.LAZY)
+	@Column(name = "code", nullable = false)
+	private String code;
+	@ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
 	
-	private List<BuildingEntity> buildings = new ArrayList<>();
+	private List<UserEntity> users = new ArrayList<>();
+
+
+
+	public List<UserEntity> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<UserEntity> users) {
+		this.users = users;
+	}
 
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public List<BuildingEntity> getBuildings() {
-		return buildings;
-	}
-	public void setBuildings(List<BuildingEntity> buildings) {
-		this.buildings = buildings;
-	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
-	}
+
+
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-}	
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+	
+
+}
