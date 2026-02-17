@@ -20,7 +20,7 @@ public class BuildingSearchBuilderConverter {
 																				.setNumberofbasement(MapUtil.getObject(params, "numberofbasement", Integer.class))
 																				.setLevel(MapUtil.getObject(params, "level", Integer.class))
 																				.setTypecode(typecode)
-																				.setAreafrom(MapUtil.getObject(params, "arafrom", Integer.class))
+																				.setAreafrom(MapUtil.getObject(params, "areafrom", Integer.class))
 																				.setAreato(MapUtil.getObject(params, "areato", Integer.class))
 																				.setRentpricefrom(MapUtil.getObject(params, "rentpricefrom", Integer.class))
 																				.setRentpriceto(MapUtil.getObject(params, "rentpriceto", Integer.class))

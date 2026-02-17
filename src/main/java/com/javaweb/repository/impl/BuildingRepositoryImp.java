@@ -104,10 +104,10 @@ public class BuildingRepositoryImp implements BuildingRepository {
 		    StringBuilder where = new StringBuilder("WHERE 1 = 1 ");
 		    joinTable(buildingSearchBuilder, sql);
 		    queryNormal(buildingSearchBuilder, where);
-		    System.out.println(where);
 		    querySpecial(buildingSearchBuilder, where);
 		    where.append(" GROUP BY b.id ");
 		    sql.append(where);
+		    System.out.println(where);
 		   
 			try(Connection conn = DriverManager.getConnection(DB_URL,USER,PASS);
 				Statement stmt = conn.createStatement();
