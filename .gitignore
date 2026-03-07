@@ -1,5 +1,14 @@
+# build
 target/
-.classpath
-.project
-.settings/
+
+# macOS
 .DS_Store
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
